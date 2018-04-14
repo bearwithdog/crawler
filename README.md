@@ -22,4 +22,4 @@ Writer.py<br>
 2、可以调节爬取深度，防止落入爬虫陷阱<br>
 ## 下一步规划：
 爬虫缓存，分布式爬虫。<br>
-本次demo爬取了 http://example.webscraping.com/ 网站中所有国家的名称已经面积。file.csv记录不全是因为默认的爬取深度为2，所以只会递进两层。
+本次demo爬取了 http://example.webscraping.com/ 网站中所有国家的名称以及面积。file.csv记录不全是因为默认的爬取深度为2，所以只会递进两层。
