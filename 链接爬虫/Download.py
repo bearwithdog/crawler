@@ -9,13 +9,13 @@ def download(url,user_agent='wswp',num_retrise=2):
         request=urllib.request.Request(url,headers=headers)
         try:
             html=urllib.request.urlopen(request).read()
-            break;
+            return html
         except urllib.error.URLError as e:
-            print('Downloading Error',e.reason,e.code)
+            print('Downloading Error',e.reason)
             html=None
+        if num_retrise>0:
             num_retrise-=1
-            if hasattr(e,'code') and 500<=e.code<600:
-                continue
-            else:
-                break
+            continue
+        else:
+            break
     return html
